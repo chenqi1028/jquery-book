@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="format-detection" content="telephone=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reader.css">
+</head>
+<body>
+    <div class="nomore" style="display: none;">没有更多了/(ㄒoㄒ)/~~</div>
+    <div id="root" class="container">
+        <!-- 相应文章操作 -->
+        <div class='m-artica-action'>
+            <div class="artical-action-mid" id="action-mid"></div>
+        </div>
+        <!-- 顶部栏 -->
+        <div id="top-nav" class="top-nav" style="display: none;">
+            <a href="index.html">
+            <div class="icon-back">
+                <img src="images/return.png" alt="">
+            </div>
+            <div class="nav-title">
+                返回书架
+            </div>
+            </a>
+        </div>
+        <div id="fiction_chapter_title"></div>
+        <div id="fiction_container" class="m-read-content">
+            <!-- 小说正文 -->
+        </div>
+        <div class="m-button-bar">
+            <ul class="u-tav">
+                <li id="prev_button">上一章</li>
+                <li class="list-button">目录</li>
+                <li id="next_button">下一章</li>
+            </ul>
+        </div>
+        <!-- 下边栏 -->
+        <div class="bottom-nav" style='display: none;'>
+            <svg t="1568899299085" class="icon list-button" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4802" width="200" height="200"><path id="p_list" d="M36.8 259.2c-15.2 0-27.2-11.2-27.2-24 0-13.6 12-24 27.2-24h97.6c15.2 0 27.2 11.2 27.2 24 0 13.6-12 24-27.2 24H36.8zM36.8 536c-15.2 0-27.2-11.2-27.2-24s12-24 27.2-24h97.6c15.2 0 27.2 11.2 27.2 24s-12 24-27.2 24H36.8zM36.8 813.6c-15.2 0-27.2-11.2-27.2-24 0-13.6 12-24 27.2-24h97.6c15.2 0 27.2 11.2 27.2 24 0 13.6-12 24-27.2 24H36.8zM280 259.2c-15.2 0-27.2-11.2-27.2-24 0-13.6 12-24 27.2-24h707.2c15.2 0 27.2 11.2 27.2 24 0 13.6-12 24-27.2 24H280zM286.4 536c-15.2 0-27.2-11.2-27.2-24 0-13.6 12-24 27.2-24h707.2c15.2 0 27.2 11.2 27.2 24 0 13.6-12 24-27.2 24H286.4zM289.6 813.6c-15.2 0-27.2-11.2-27.2-24 0-13.6 12-24 27.2-24h707.2c15.2 0 27.2 11.2 27.2 24 0 13.6-12 24-27.2 24H289.6z" fill="#e6e6e6" p-id="4803"></path></svg>
+            <svg t="1568899241543" class="icon font-button" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3116" width="200" height="200"><path id="p_font" d="M377.282 203.641c-2.691-7.177-9.868-12.109-17.94-12.109h-38.573c-7.625 0-14.801 4.484-17.942 12.109L65.112 798.379c-5.382 13.008 4.036 26.912 17.942 26.912H99.2c8.073 0 15.249-4.934 17.94-12.11l58.757-146.217c2.689-7.177 9.866-12.11 17.94-12.11h289.296c7.625 0 14.8 4.484 17.94 12.11l58.756 146.666c2.691 7.175 9.867 12.109 17.94 12.109h19.737c13.454 0 22.874-13.904 17.94-26.91L377.282 203.641z m69.971 399.184H226.58c-13.904 0-23.323-13.904-17.942-26.91l111.683-283.017c6.727-16.596 30.051-16.596 36.328 0L465.64 576.362c4.935 12.559-4.483 26.463-18.387 26.463zM959.464 726.616V517.607c-2.243-93.742-54.72-141.734-157.431-143.976-85.668 0-138.592 32.742-158.777 98.226-3.588 12.558 5.831 25.117 18.838 25.117h14.353c8.522 0 16.147-5.382 18.39-13.904 11.213-40.816 47.095-61.448 106.748-61.448 65.933-2.243 100.468 28.257 102.71 92.396v21.529c0 10.764-8.522 19.287-19.287 19.287h-31.396c-68.623 2.241-117.961 9.418-147.562 20.631-57.412 25.117-87.015 67.727-89.257 126.931 4.486 81.63 53.376 125.136 145.77 130.072h3.588c65.485-4.935 110.337-26.462 135.452-65.037l3.59-6.727 2.241 46.645c0.449 10.316 8.972 18.39 19.287 18.39h14.352c11.662 0 20.185-9.868 19.287-21.529-2.243-25.116-2.691-51.131-0.896-77.594z m-184.791 64.587c-64.139-2.241-97.33-32.292-99.573-89.256-2.241-68.622 63.691-101.365 199.144-99.122h12.11c10.316 0 19.286 8.522 19.286 18.838 1.347 110.784-42.161 167.298-130.967 169.54z" p-id="3117" fill="#e6e6e6"></path></svg>
+            <svg t="1568899281946" class="icon night-button" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3915" width="200" height="200"><path id="p_night" d="M688.2 703.5c-204.6 0-370.4-165.8-370.4-370.4 0-67.7 18.2-131.1 49.9-185.7C237 208.2 146.5 340.6 146.5 494.2c0 211.2 171.2 382.4 382.4 382.4 155.1 0 288.7-92.4 348.7-225.1-55.5 33-120.2 52-189.4 52z" p-id="3916" fill="#e6e6e6"></path></svg>
+            <div class="bottom-nav-item">
+            <div class="item list-button">目录</div>
+            <div class="item font-button">设置</div>
+            <div class="item night-button">夜间</div>
+            </div>
+        </div>
+        <!-- 背景及字体设置 -->
+        <div class="nav-pannel-bk font-container" style='display: none;'></div>
+        <div class="nav-pannel font-container" id="font-container" style='display: none;'>
+            <div class="child-mod">
+                <span>字号</span>
+                <button id="large-font" class="font-size-button">大</button>
+                <button id="small-font" class="font-size-button">小</button>
+            </div>
+            <div class="child-mod">
+                <span>背景</span>
+                <div class="bk-container">
+                    <div class="bk-container-current bk1" style="background: #c4b395;"></div>
+                </div>
+                <div class="bk-container">
+                    <div class="bk-container-current bk2" style="background: #c3d4e6;"></div>
+                </div>
+                <div class="bk-container">
+                    <div class="bk-container-current bk3" style="background: #c8e8c8;"></div>
+                </div>
+                <div class="bk-container">
+                    <div class="bk-container-current bk4" style="background: #fff;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 目录呼出 -->
+        <div class="nav-show">
+            <div class="nav-show-title">目录</div>
+            <div class="nav-show-total">共54章</div>
+            <div class="nav-show-bar">正文卷</div>
+            <div class="items" name="0010001">第一章 嬉皮笑脸</div>
+            <div class="items" name="0010002">第二章 情人节之夜</div>
+            <div class="items" name="0010003">第三章 不是东西</div>
+            <div class="items" name="0010004">第四章 妖媚妖孽</div>
+            <div class="items" name="0010005">第五章 婊子无情</div>
+            <div class="items" name="0010006">第六章 残酷的拯救</div>
+            <div class="items" name="0010007">第七章 最是伤心无语时</div>
+            <div class="items" name="0010008">第八章 有个女孩名叫微微</div>
+            <div class="items" name="0010009">第九章 记忆</div>
+            <div class="items" name="0010010">第十章 爱情是这样诞生的</div>
+            <div class="items" name="0010011">第十一章 昔日不在</div>
+            <div class="items" name="0010012">第十二章 兄弟</div>
+            <div class="items" name="0010013">第十三章 神奇的三爷</div>
+            <div class="items" name="0010014">第十四章 怀孕</div>
+            <div class="items" name="0010015">第十五章 医院</div>
+            <div class="items" name="0010016">第十六章 犯傻</div>
+            <div class="items" name="0010017">第十七章 冲突</div>
+            <div class="items" name="0010018">第十八章 年轻的代价</div>
+            <div class="items" name="0010019">第十九章 田红</div>
+            <div class="items" name="0010020">第二十章 再见了，北京</div>
+            <div class="items" name="0010021">第二十一章 轮回</div>
+            <div class="items" name="0010022">第二十二章 机场</div>
+            <div class="items" name="0010023">第二十三章 钱</div>
+            <div class="items" name="0010024">第二十四章 车祸</div>
+            <div class="items" name="0010025">第二十五章 坐牢</div>
+            <div class="items" name="0010026">第二十六章 微微</div>
+            <div class="items" name="0010027">第二十七章 麻烦</div>
+            <div class="items" name="0010028">第二十八章 誓言</div>
+            <div class="items" name="0010029">第二十九章 再见，爱情</div>
+            <div class="items" name="0010030">第三十章 犯贱</div>
+            <div class="items" name="0010031">第三十一章 新生活</div>
+            <div class="items" name="0010032">第三十二章 酒后一夜</div>
+            <div class="items" name="0010033">第三十三章 靠，上贼船了</div>
+            <div class="items" name="0010034">第三十四章 落荒而逃</div>
+            <div class="items" name="0010035">第三十五章 同居第一天</div>
+            <div class="items" name="0010036">第三十六章 同居第二夜</div>
+            <div class="items" name="0010037">第三十七章 心痛</div>
+            <div class="items" name="0010038">第三十八章 变了，都他妈变了</div>
+            <div class="items" name="0010039">第三十九章 太有面子了</div>
+            <div class="items" name="0010040">第四十章 浪漫之都</div>
+            <div class="items" name="0010041">第四十一章 亏大了</div>
+            <div class="items" name="0010042">第四十二章 人啊</div>
+            <div class="items" name="0010043">第四十三章 我赢了</div>
+            <div class="items" name="0010044">第四十四章 田红的叙述</div>
+            <div class="items" name="0010045">第四十五章 婚礼</div>
+            <div class="items" name="0010046">第四十六章 我帮你！</div>
+            <div class="items" name="0010047">第四十七章 痛扁</div>
+            <div class="items" name="0010048">第四十八章 冷酷之夜</div>
+            <div class="items" name="0010049">第四十九章 车祸</div>
+            <div class="items" name="0010050">第五十章 咬你屁股也一样疼</div>
+            <div class="items" name="0010051">第五十一章 木乃伊归来</div>
+            <div class="items" name="0010052">第五十二章 明白已变成回忆</div>
+        </div>
+        <!-- 目录隐藏 -->
+        <div class="nav-hide" id="side_close"></div>
+    </div>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        window.jQuery = $;
+    </script>
+    <script src="js/reader.js"></script>
+</body>
+</html>
