@@ -1,2 +1,6 @@
 # jquery-book
-jquery实现轻文书城，小说阅读器webApp
+jquery实现小说阅读器webApp
+
+轻文书城
+
+I like node.js and Vue, but this is written by JQ
